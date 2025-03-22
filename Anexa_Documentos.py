@@ -32,12 +32,13 @@ def localizar_aba(aplicacao,driver) :
             print('Aba não encontrada.')
             tentativa_aba = valida_input_sim_nao(aplicacao,'Verifique se abriu uma aba da tela de Novo Processos do S-Works.','Deseja tentar novamente? ')
             if tentativa_aba.upper() == 'N' :
-                sys.exit()
+                return sys.exit()
             else:
                 os.system('cls')
                 print(aplicacao)
+                print('')
                 print('Buscando aba...')
-                break
+                continue
         else :
             break
         

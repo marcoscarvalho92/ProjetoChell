@@ -7,7 +7,7 @@ import sys
 from Anexa_Documentos import localizar_aba,anexar_arquivos
 from Valida_Input import valida_input_sim_nao
 
-nome_aplicacao = '----- Chell 1.1.0 -----'
+nome_aplicacao = '----- Chell 1.1.1 -----'
 print(nome_aplicacao)
 print('')
 print('Antes de iniciarmos, algumas informações importantes:',end='\n\n')
