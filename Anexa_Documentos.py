@@ -35,7 +35,7 @@ def localizar_aba(aplicacao,driver) :
                 sys.exit()
             else:
                 os.system('cls')
-                print(nome_aplicacao)
+                print(aplicacao)
                 print('Buscando aba...')
                 break
         else :
