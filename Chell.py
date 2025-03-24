@@ -4,10 +4,11 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import sys
-from Anexa_Documentos import localizar_aba,anexar_arquivos
+from Anexa_Documentos import anexar_arquivos
+from Controles_Chrome import localizar_aba
 from Valida_Input import valida_input_sim_nao
 
-nome_aplicacao = '----- Chell 1.1.1 -----'
+nome_aplicacao = '----- Chell 1.2.1 -----'
 print(nome_aplicacao)
 print('')
 print('Antes de iniciarmos, algumas informações importantes:',end='\n\n')
@@ -42,9 +43,9 @@ driver = webdriver.Chrome(service=Service(), options=chrome_options)
 
 # estrutura de loop para permitir múltiplas execuções
 while True :
-    localizar_aba(nome_aplicacao,driver)
+    localizar_aba(nome_aplicacao,driver,'S-Works | Novo Processo')
     anexar_arquivos(nome_aplicacao,driver)
-    controlador_execucoes = valida_input_sim_nao(nome_aplicacao,'Posso realizar a operação novamente, em outro processo que está sendo iniciado.','Deseja realizar a operação novamente? ')
+    controlador_execucoes = valida_input_sim_nao(nome_aplicacao,'Arquivos anexados.\n\nPosso realizar a operação novamente, em outro processo que está sendo iniciado.','Deseja realizar a operação novamente? ')
     if controlador_execucoes.upper() == 'S' :
         continue
     else :

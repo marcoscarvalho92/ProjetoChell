@@ -4,6 +4,10 @@
    'C:\\Users\\Marcos\\Desktop\\Projetos '
    'Python\\Chell\\ProjetoChell\\Anexa_Documentos.py',
    'PYMODULE'),
+  ('Controles_Chrome',
+   'C:\\Users\\Marcos\\Desktop\\Projetos '
+   'Python\\Chell\\ProjetoChell\\Controles_Chrome.py',
+   'PYMODULE'),
   ('Valida_Input',
    'C:\\Users\\Marcos\\Desktop\\Projetos '
    'Python\\Chell\\ProjetoChell\\Valida_Input.py',
