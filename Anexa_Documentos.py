@@ -1,47 +1,7 @@
-import subprocess
 import time
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import os
-import sys
 from Valida_Input import valida_input_sim_nao
-
-
-def localizar_aba(aplicacao,driver) :
-    
-
-    while True:
-        abas = driver.window_handles
-        aba_encontrada = False
-        # percorro as abas do Chrome para encontrar a correta
-        for aba in abas:
-            driver.switch_to.window(aba)
-            time.sleep(0.5)  
-
-            # verifico se a aba do S-Works (Novo Processo) foi encontrada
-            if "S-Works | Novo Processo" in driver.title:
-                print("Aba correta encontrada!")
-                aba_encontrada = True
-                break
-                
-        
-        # Checo se encontrei a aba correta    
-        if aba_encontrada == False :
-            print('Aba não encontrada.')
-            tentativa_aba = valida_input_sim_nao(aplicacao,'Verifique se abriu uma aba da tela de Novo Processos do S-Works.','Deseja tentar novamente? ')
-            if tentativa_aba.upper() == 'N' :
-                sys.exit()
-            else:
-                os.system('cls')
-                print(aplicacao)
-                print('Buscando aba...')
-                break
-        else :
-            break
-        
-
 
 
 def anexar_arquivos(aplicacao,driver) :
